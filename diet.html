@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Diet</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .group1 {
+            background-color: #c0e0d2;
+        }
+
+        .group2 {
+            background-color: #ffd3b6;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            animation: fadeIn 2s; /* Adjust the duration as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Your Journey to a Vibrant Life Starts Here</h1>
+        <nav>
+            <ul>
+                <li><a href="file:///K:/Control/%E3%85%A4/K2eSf51ZxeP9%23A1Zc5/Sector/Real%20Time/Complete%20project/information.html">Home</a></li>
+                <li><a href="file:///K:/Control/%E3%85%A4/K2eSf51ZxeP9%23A1Zc5/Sector/Real%20Time/Complete%20project/article.html">Articles</a></li>
+                <li><a href="file:///K:/Control/%E3%85%A4/K2eSf51ZxeP9%23A1Zc5/Sector/Real%20Time/Complete%20project/Worksout.html">Workouts</a></li>
+                <li><a href="file:///K:/Control/%E3%85%A4/K2eSf51ZxeP9%23A1Zc5/Sector/Real%20Time/Complete%20project/diet.html">Diet</a></li>
+                <li><a href="file:///K:/Control/%E3%85%A4/K2eSf51ZxeP9%23A1Zc5/Sector/Real%20Time/Complete%20project/information.html">Information</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="section-separator">
+    <h1>If you want out special diet routine you must use our this system</h1>
+    <h1>Our doctor will help you to select a plan of diet</h1>
+    </section>
+    <section id="home" class="section-separator">
+        <h1>To get a solid diet follow our instraction</h1>
+    </section>
+    <section id="home" class="content-box">
+        <h1>Calculate your BMI & BMR</h1>
+        <label for="gender">Gender:</label>
+    <label><input type="radio" name="gender" value="male" checked> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter weight" required>
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter height" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter age" required>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+    <script>
+        function calculate() {
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const age = parseInt(document.getElementById('age').value);
+
+            let bmr, bmi;
+
+            if (gender === 'male') {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            bmi = weight / ((height / 100) ** 2);
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `BMI: ${bmi.toFixed(2)}<br>BMR: ${bmr.toFixed(2)} calories/day`;
+        }
+        
+ </script>
+    </section>
+
+    <section id="home" class="content-box">
+        <h1>Look at this chart</h1>
+        <h1>Chart</h1>
+
+    <table>
+        <tr>
+            <th>BMI</th>
+            <th>Condition</th>
+            <th>What to do</th>
+        </tr>
+        <tr>
+            <td>Less then 18.5</td>
+            <td class="group1">Not really good</td>
+            <td class="group2">Need to consume calorie wise food</td>
+        </tr>
+        <tr>
+            <td>18.5-24.9</td>
+            <td class="group1">Perfect</td>
+            <td class="group2">Keep it up</td>
+        </tr>
+        <tr>
+            <td>25-29.9</td>
+            <td class="group1">Little bit weight</td>
+            <td class="group2">Need to exercise</td>
+        </tr>
+        <tr>
+            <td>30-34.9</td>
+            <td class="group1">1st stage of getting fatty</td>
+            <td class="group2">Need good diet and exercise</td>
+        </tr>
+        <tr>
+            <td>35-39.9</td>
+            <td class="group1">2nd stage of getting fatty</td>
+            <td class="group2">Follow good diet & exercise</td>
+        </tr>
+        <tr>
+            <td>Getter then 40</td>
+            <td class="group1">Very much fat! Risk of death</td>
+            <td class="group2">Need to visit doctor</td>
+        </tr>
+    </table>
+    </section>
+    <section id="home" class="content-box">
+        <h1>Doctor: You should do this exercise and diet i've written down bellow</h1>
+        <h1>Chart</h1>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .group1 {
+            background-color: #c0e0d2;
+        }
+
+        .group2 {
+            background-color: #ffd3b6;
+        }
+        </style>
+
+        <table>
+            <tr>
+                <th>Diet</th>
+                <th>Exercise</th>
+                <th>Extras</th>
+            </tr>
+            <tr>
+                <td>Day1- Consume food according your calorie and should take vegetables</td>
+                <td class="group1">commando climb 30 x 3 & Leg crunces 30 x 2 & Pull ups 10 x 2</td>
+                <td class="group2">Drink 3.33L water daily and avoid sugar</td>
+            </tr>
+            <tr>
+                <td>Day2- Consume food according your calorie and should take 1 glass of milk and a half boil egg</td>
+                <td class="group1">Push ups 25 x 3 & Wide p.ups 30 x 2 & X shape leg crunces 40 x 2</td>
+                <td class="group2">Drink 3.33L water daily and avoid sugar</td>
+            </tr>
+            <tr>
+                <td>Day3- Consume food according your calorie and mush take some fiber,Vit-A,B,C & some meat</td>
+                <td class="group1">90 degree leg ,touch 30 x 4 , 90 degree leg rise 40 x 4 , triceps workout 10 x 20 & Pull ups 30 x 4 </td>
+                <td class="group2">Drink 3.33L water daily and avoid sugar</td>
+            </tr>
+            <tr>
+                <td>Day4- Consume food according your calorie and take some mineral salts,take Vit-k,Eand only 101 grams fats</td>
+                <td class="group1">Comando climb 30 x 3 , Push ups 55 x 5 , Pull ups 60 x 5 ,Leg rise 90 x 7 ,Wide push ups 75 x 8 & X shape leg crunces 100 x 10</td>
+                <td class="group2">Drink 3.33L water daily and avoid sugar</td>
+            </tr>
+        </table>
+
+    </section>
+    <section id="home" class="section-separator">
+        <style>
+            h1e {
+            background: linear-gradient(45deg, #ff6b6b, #ffc107); /* Gradient highlight */
+            color: #fff; /* Text color */
+            padding: 10px;
+            border-radius: 8px; /* Optional: Rounded corners */
+            animation: pulsate 1.5s ease-in-out infinite; /* Animation */
+        }
+
+        @keyframes pulsate {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        </style>
+    <h1e>Repeat this routine to next 66 days you will get your result. No one can follow this routine at the last od 66 days. if you can you are the top 1%. Can you?</h1e>
+
+    </section>
+    <footer>
+        <p>&copy; 2023 BE HEALTH e</p>
+    </footer>
+
+</body>
+    </html>
+    
